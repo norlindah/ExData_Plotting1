@@ -6,10 +6,10 @@ subSetData$Time <- strptime(paste(subSetData$Date, subSetData$Time), format="%d/
 subSetData$Date <- as.Date(subSetData$Date, format="%d/%m/%Y")
 
 # Plot 4
-globalActivePower <- as.numeric(subSetData$Global_active_power)
-globalReactivePower <- as.numeric(subSetData$Global_reactive_power)
-voltage <- as.numeric(subSetData$Voltage)
-subMetering1 <- as.numeric(subSetData$Sub_metering_1)
+globalActivePower <- as.numeric(as.character(subSetData$Global_active_power))
+globalReactivePower <- as.numeric(as.character(subSetData$Global_reactive_power))
+voltage <- as.numeric(as.character(subSetData$Voltage))
+subMetering1 <- as.numeric(as.character(subSetData$Sub_metering_1))
 subMetering2 <- as.numeric(subSetData$Sub_metering_2)
 subMetering3 <- as.numeric(subSetData$Sub_metering_3)
 
