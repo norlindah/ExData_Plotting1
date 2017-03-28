@@ -6,7 +6,7 @@ subSetData$Time <- strptime(paste(subSetData$Date, subSetData$Time), format="%d/
 subSetData$Date <- as.Date(subSetData$Date, format="%d/%m/%Y")
 
 # Plot 1
-globalActivePower <- as.numeric(subSetData$Global_active_power)
+globalActivePower <- as.numeric(as.character(subSetData$Global_active_power))
 png("plot1.png", width=480, height=480)
 hist(globalActivePower, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
 dev.off()
